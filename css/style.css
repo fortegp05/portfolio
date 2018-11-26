@@ -194,11 +194,11 @@ footer .pr {
 #Profile dt {
 	font-weight: bold;	/*太字にする設定。標準がいいならこの行削除。*/
 	float: left;
-	width: 16em;
+	width: 8em;
 }
 /*記事設定*/
 #Profile dd {
-	padding-left: 16em;
+	padding-left: 8em;
 }
 
 /*テーブル
