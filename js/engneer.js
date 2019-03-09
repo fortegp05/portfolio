@@ -54,7 +54,7 @@ const productDatas = [
     }
 ];
 // レスポンシブ対応
-const mediaQuery = matchMedia('(max-width: 580px');
+const mediaQuery = matchMedia('(max-width: 580px)');
 
 $(document).ready(function(){
     // ページが読み込まれた時とリサイズ時にレスポンシブ対応で画面幅に対応させる
@@ -70,6 +70,8 @@ $(document).ready(function(){
         if (document.fortegp05.onScrollHandlerToc) document.fortegp05.onScrollHandlerToc();
     }
 
+    if (typeof ResizeObserver) return;
+    
     // 画面サイズが変わった際のイベント定義
     var observer = new ResizeObserver((entries) => {
         if (mediaQuery.matches) return; // レスポンシブのときはやらない
