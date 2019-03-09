@@ -23,9 +23,9 @@
             text-align: left;
             background-color: white;
             box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11);
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
         }
         h1 {
             font-weight: bold;

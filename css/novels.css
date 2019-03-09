@@ -1,41 +1,3 @@
-/*コンテナー（ホームページを囲む一番外側のブロック）
----------------------------------------------------------------------------*/
-#container {
-	max-width: 1400px;	/*最大幅*/
-	margin: 0px 0px 0px 30px;
-}
-
-
-/*目次付き記事ページ
----------------------------------------------------------------------------*/
-#contents {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 1fr 300px;
-}
-#contents > section {
-	grid-row: 1;
-	grid-column: 1 / 2;
-	width: 99%;
-	margin-bottom: 30px;
-}
-
-#contents > .toc {
-	grid-row: 1;
-	grid-column: 2 / 2;
-	margin-bottom: 30px;
-	height: 100%;
-	line-height: 1.3;
-    font-size: 14px;
-    background: lightgray;
-    padding-top: 15px;
-}
-
-/* ヘッダー */
-h1 {
-    margin-bottom: -10px;
-}
-
 p {
     line-height: 1.5;
 }
@@ -45,17 +7,6 @@ p {
     color: gray;
     margin-left: 20px;
     margin-top: -40px;
-}
-
-/*画面幅1000px以下の設定
-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width:1000px){
-    #contents {
-        display: block;
-    }
-    #contents > section {
-        width: 97%;
-    }
 }
 
 /*画面幅580px以下の設定
