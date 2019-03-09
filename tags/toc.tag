@@ -32,9 +32,6 @@
     .side {
       margin: 0;
       padding: 0;
-      top: 110px;
-      position: -webkit-sticky;
-      position: sticky;
       margin-left: 5px;
       margin-right: 10px;
     }
