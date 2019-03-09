@@ -10,7 +10,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	-webkit-text-size-adjust: none;
-	color: #666;	/*全体の文字色*/
+	color: #002e33;	/*全体の文字色*/
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
 	font-size: 16px;	/*文字サイズ*/
 	line-height: 2;		/*行間*/
@@ -26,7 +26,7 @@ iframe {width: 100%;}
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
 a {
-	color: #666;	/*リンクテキストの色*/
+	color: #002e33;	/*リンクテキストの色*/
 	transition: 0.3s;	/*マウスオン時の移り変わるまでの時間設定。0.3秒。*/
 }
 a:hover {
@@ -48,7 +48,7 @@ header {
 	text-align: center;	/*内容を中央よせ*/
 }
 /*ロゴ画像設定*/
-#logo  img {
+#logo img {
 	width: 35%;	/*画像幅*/
 	margin-bottom: 40px;	/*画像の下に空けるスペース*/
 }
@@ -63,6 +63,7 @@ header {
 div.two_column {
 	display: -webkit-box;
 	margin-bottom: 15px;
+	margin-left: 20px;
 }
 
 div.two_column_img {
@@ -70,14 +71,15 @@ div.two_column_img {
 	max-width: 150px;
 }
 
-div.two_column_img img {
+.circle_icon {
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
 }
 
 div.two_column_about {
-	width: 62%;
+	width: 80%;
+	padding: 0px 10px 14px;
 }
 
 /*トップページのメイン画像
@@ -86,7 +88,6 @@ div.two_column_about {
 #mainimg {
 	margin-bottom: 40px;	/*画像の下に空けるスペース*/
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.2);	/*影の設定。右へ、左へ、広げる幅。0,0,0は黒のことで0.2は透明度20%のこと。*/
-	border-radius: 10px;	/*角を丸くする指定。この１行を削除すれば角丸がなくなります。*/
 }
 
 /*メニュー
@@ -118,19 +119,48 @@ div.two_column_about {
 #contents h2 {
 	clear: both;
 	margin-bottom: 15px;
-	color: #fff;		/*文字色*/
-	padding: 5px 20px;	/*上下、左右への余白*/
-	background: #224acf;	/*背景色*/
-	border-radius: 10px;	/*角を丸くする指定。この１行を削除すれば角丸がなくなります。*/
+	padding: 5px;	/*上下、左右への余白*/
+	font-size: xx-large;
+	font-weight: bold;
+}
+#contents h2.profile:before {
+	content: "";
+	display: inline-block;
+	background-image: url(../images/human.png);
+	background-size: contain;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	margin-bottom: 5px;
+}
+#contents h2.project:before {
+	content: "";
+	display: inline-block;
+	background-image: url(../images/hammer.png);
+	background-size: contain;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+#contents h2.contact:before {
+	content: "";
+	display: inline-block;
+	background-image: url(../images/mail.png);
+	background-size: contain;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+	margin-bottom: 5px;
 }
 /*コンテンツのh3タグの設定*/
 #contents h3 {
 	clear: both;
-	margin-bottom: 15px;
-	padding: 3px 20px;	/*上下、左右への余白*/
-	background: #fff;	/*背景色*/
-	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
-	border-radius: 10px;	/*角を丸くする指定。この１行を削除すれば角丸がなくなります。*/
+	padding-left: 20px;	/*上下、左右への余白*/
+	font-size: larger;
+	font-weight: bold;
 }
 /*コンテンツのp(段落)タグ設定*/
 #contents p {
@@ -139,10 +169,6 @@ div.two_column_about {
 #contents h2 + p,
 #contents h3 + p {
 	margin-top: -5px;
-}
-
-#contents > section {
-	margin-bottom: 30px;
 }
 
 /*Galleryページ
@@ -239,63 +265,303 @@ footer .pr {
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width:800px){
 
-/*コンテナー（ホームページを囲む一番外側のブロック）
+	/*コンテナー（ホームページを囲む一番外側のブロック）
+	---------------------------------------------------------------------------*/
+	#container {
+		margin: 20px 20px 0;	/*上、左右、下に空けるブロックの外側へのスペース*/
+	}
+
+}
+
+/*共通
 ---------------------------------------------------------------------------*/
-#container {
-	margin: 20px 20px 0;	/*上、左右、下に空けるブロックの外側へのスペース*/
+/* InfoCard style */
+.info_area:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+@media(max-width: 768px) {
+	.info_card{
+		float: none;
+	}
+}
+.card_engneer_bg {
+	background-image: url(../images/rawpixel-632449-unsplash.jpg);
+}
+.card_videogame_bg {
+	background-image: url(../images/michael-trimble-1281343-unsplash.jpg);
+}
+.card_plamo_bg {
+	background-image: url(../images/IMG_1478_sml.JPG);
+}
+.card_soldering_bg {
+	background-image: url(../images/chris-ried-534420-unsplash.jpg);
+}
+.card_novels_bg {
+	background-image: url(../images/jason-leung-708875-unsplash.jpg);
+}
+.card_mini4wd_bg {
+	background-image: url(../images/IMG_1696.JPG);
+}
+.card_anime_manga_bg {
+	background-image: url(../images/miika-laaksonen-737086-unsplash.jpg);
+}
+.info_card {
+	width: 280px;
+	height: 240px;
+	margin: 20px;
+	border-radius: 10px;
+	color: white;
+	background-size:cover;
+	box-shadow: 0 3px 6px #ccc;
+	float: left;
+	position: relative;
+	z-index: 0;
+}
+.info_card:hover {
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, .4);
+	transform: scale(1.02,1.02);
+	text-decoration: underline;
+}
+.info_card::before {
+	content: '';
+	filter: brightness(30%);
+	z-index: -1;
+	position: absolute;
+	background: inherit;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	border-radius: 10px;
 }
 
+
+.info_card a {
+	color: white;
+}
+.info_image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 5px 5px 0 0;
+}
+.info_title {
+	font-size: 150%;
+}
+/* 画像付きのカード */
+.info_img_card {
+	width: 280px;
+	height: 380px;
+	margin: 20px;
+	border-radius: 5px;
+	background: white;
+	box-shadow: 0 3px 6px #ccc;
+	float: left;
+}
+.info_img_card:hover {
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, .4);
+	transform: scale(1.02,1.02);
+	text-decoration: underline;
+}
+/* 自己紹介カード */
+.info_personal_card {
+	width: 240px;
+	height: 300px;
+	margin: 20px;
+	text-align: center;
+	border-radius: 5px;
+	background: white;
+	box-shadow: 0 3px 6px #ccc;
+	margin-right: auto;
+}
+/* リンクのスタイル */
+.a_no_line {
+	text-decoration: none;
+}
+.aLink {
+	cursor: pointer;
 }
 
+/* パンくずリスト */
+.pankuzu {
+	font-size: small;
+	margin-left: 10px;
+	padding-left: 0;
+	padding-bottom: 20px;
 
+}
+
+.pankuzu li {
+	display: inline;
+	list-style: none;
+	font-weight: bold;
+}
+
+.pankuzu li:after {
+	content: '>';
+	padding: 0 3px;
+}
+
+.pankuzu li:last-child:after {
+	content: '';
+}
+
+.pankuzu li a {
+	text-decoration: none;
+}
+
+.pankuzu li a:hover {
+	text-decoration: underline;
+}
+
+/* 箇条書き */
+ul.list_items {
+	padding-left: 50px;
+}
+ul.list_items li {
+	list-style-type: disc;
+}
+ul.list_items li ul {
+	padding-left: 20px;
+}
+ul.list_items li ul li  {
+	list-style-type: circle;
+}
+ul.list_items li ul li ul {
+	padding-left: 20px;
+}
+ul.list_items li ul li ul li {
+	list-style-type: square;
+}
+
+/* レスポンシブなtableタグ対応 */
+.responsive_tbl {
+	width: 95%;
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+.responsive_tbl, .responsive_tbl td, .responsive_tbl th {
+	word-break: break-all;
+	border: 1px solid #999;	/*テーブルの枠線の幅、線種、色*/
+	padding: 10px;			/*テーブル内の余白*/
+}
+/*テーブル１行目に入った見出し部分*/
+.responsive_tbl th {
+	width: auto;
+	text-align: left;	/*左よせ*/
+	background: #ccc;	/*背景色*/
+}
+/*テーブルの左側ボックス*/
+.responsive_tbl th {
+	text-align: center;	/*センタリング*/
+}
+
+/* 行の背景色を交互に変える */
+.responsive_tbl tr:nth-child(even) {
+	background: #FAFAFA;
+} 
+.responsive_tbl tr:nth-child(odd) {
+	background: #F3F3F3;
+}
+
+/* レスポンシブでは非表示 */
+.show_responsive {
+	display: none;
+}
+
+/*画面幅1000px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:1000px){
+	/* TOC非表示 */
+	#contents > .toc {
+		display: none;
+	}
+}
 
 /*画面幅580px以下の設定
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width:580px){
 
-/*全体の設定
----------------------------------------------------------------------------*/
-body {
-	font-size: 12px;	/*文字サイズ*/
-	line-height: 1.5;	/*行間*/
-}
+	/*全体の設定
+	---------------------------------------------------------------------------*/
 
-/*ヘッダー（ロゴが入った最上段のブロック）
----------------------------------------------------------------------------*/
-/*ロゴ画像設定*/
-#logo  img {
-	width: 90%;	/*画像幅*/
-}
-/*トップページのロゴ画像設定*/
-#top #logo img {
-	width: 45%;	/*画像幅*/
-	top: 35%;	/*headerブロックに対して上から40%の場所に配置*/
-}
+	/*ヘッダー（ロゴが入った最上段のブロック）
+	---------------------------------------------------------------------------*/
+	/*ロゴ画像設定*/
+	#logo  img {
+		width: 90%;	/*画像幅*/
+	}
+	/*トップページのロゴ画像設定*/
+	#top #logo img {
+		width: 45%;	/*画像幅*/
+		top: 35%;	/*headerブロックに対して上から40%の場所に配置*/
+	}
+	.circle_icon {
+		border-radius: 50%;
+		width: 75px;
+		height: 75px;
+	}
+	
+	/*メニュー
+	---------------------------------------------------------------------------*/
+	/*メニュー１個あたりの設定*/
+	#menubar li {
+		display: block;	/*縦並びにする設定*/
+		margin-bottom: 10px;
+	}
+	#menubar li a {
+		text-decoration: none;
+		padding: 8px 30px;	/*各メニュー内の余白。*/
+	}
 
-/*メニュー
----------------------------------------------------------------------------*/
-/*メニュー１個あたりの設定*/
-#menubar li {
-	display: block;	/*縦並びにする設定*/
-	margin-bottom: 10px;
-}
-#menubar li a {
-	text-decoration: none;
-	padding: 8px 30px;	/*各メニュー内の余白。*/
-}
+	/*Galleryページ
+	---------------------------------------------------------------------------*/
+	/*各ブロックごとの設定*/
+	.list {
+		padding: 10px;	/*ボックス内の余白*/
+	}
 
-/*Galleryページ
----------------------------------------------------------------------------*/
-/*各ブロックごとの設定*/
-.list {
-	padding: 10px;	/*ボックス内の余白*/
-}
+	/*テーブル
+	---------------------------------------------------------------------------*/
+	/*tテーブルブロック設定*/
+	.ta1, .ta1 td, .ta1 th {
+		padding: 5px;			/*テーブル内の余白*/
+	}
 
-/*テーブル
----------------------------------------------------------------------------*/
-/*tテーブルブロック設定*/
-.ta1, .ta1 td, .ta1 th {
-	padding: 5px;			/*テーブル内の余白*/
-}
+	/*共通
+	---------------------------------------------------------------------------*/
+	/* InfoCard style */
+	.info_card {
+		width: 90%;
+	}
+	.info_img_card {
+		width: 90%;
+	}
 
+	/* レスポンシブでは表示 */
+	.show_responsive {
+		display: block;
+	}
+
+	/* レスポンシブテーブル */
+	.responsive_tbl {
+		width: 90%;
+	}
+	.responsive_tbl th,
+	.responsive_tbl td {
+		display: block;
+	}
+	.responsive_tbl th:first-child,
+	.responsive_tbl td:first-child {
+		border-bottom: none;
+	}
+	.responsive_tbl td:first-child .responsive_tbl_presen_icon {
+		float: right;
+	}
+	.responsive_tbl th:last-child,
+	.responsive_tbl td:last-child {
+		border-bottom: solid 1px #ccc;
+		display: none;
+	}
 }

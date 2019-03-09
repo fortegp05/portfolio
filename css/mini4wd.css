@@ -1,0 +1,101 @@
+/*コンテナー（ホームページを囲む一番外側のブロック）
+---------------------------------------------------------------------------*/
+#container {
+	max-width: 1400px;	/*最大幅*/
+	margin: 0px 0px 0px 30px;
+}
+
+
+/*目次付き記事ページ
+---------------------------------------------------------------------------*/
+#contents {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 300px;
+}
+#contents > section {
+	grid-row: 1;
+	grid-column: 1 / 2;
+	width: 99%;
+	margin-bottom: 30px;
+}
+
+#contents > .toc {
+	grid-row: 1;
+	grid-column: 2 / 2;
+	margin-bottom: 30px;
+	height: 100%;
+	line-height: 1.3;
+    font-size: 14px;
+    background: lightgray;
+    padding-top: 15px;
+}
+
+/* ヘッダー */
+h1 {
+    margin-bottom: -10px;
+}
+
+/*いままで作ったもの*/
+.updateDateMade {
+    color: gray;
+    margin-left: 20px;
+    margin-top: -40px;
+}
+
+/* ギャラリー */
+.imgCardArea {
+    padding-left: 20px;
+}
+.imgCardArea:after {
+	content: "";
+	clear: both;
+    display: block;
+}
+@media(max-width: 768px) {
+	.imgCardArea{
+		float: none;
+	}
+}
+.imgCard {
+	width: 400px;
+    height: auto;
+    margin: 5px;
+	border-radius: 10px;
+    float: left;
+    margin-bottom: 20px;
+}
+.imgData {
+	width: 400px;
+	height: auto;
+	border-radius: 10px;
+	float: left;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/*画面幅1000px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:1000px){
+    #contents {
+        display: block;
+    }
+    #contents > section {
+        width: 97%;
+    }
+}
+
+/*画面幅580px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:580px){
+    .imgCard {
+        width: 300px;
+        height: auto;
+    }
+    .imgData {
+        width: 300px;
+        height: auto;
+    }
+}

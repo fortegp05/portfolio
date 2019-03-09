@@ -1,0 +1,109 @@
+/*コンテナー（ホームページを囲む一番外側のブロック）
+---------------------------------------------------------------------------*/
+#container {
+	max-width: 1400px;	/*最大幅*/
+	margin: 0px 0px 0px 30px;
+}
+
+
+/*目次付き記事ページ
+---------------------------------------------------------------------------*/
+#contents {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 300px;
+}
+#contents > section {
+	grid-row: 1;
+	grid-column: 1 / 2;
+	width: 99%;
+	margin-bottom: 30px;
+}
+
+#contents > .toc {
+	grid-row: 1;
+	grid-column: 2 / 2;
+	margin-bottom: 30px;
+	height: 100%;
+	line-height: 1.3;
+    font-size: 14px;
+    background: lightgray;
+    padding-top: 15px;
+}
+
+/* ヘッダー */
+h1 {
+    margin-bottom: -10px;
+}
+
+/*いまプレイしているゲーム*/
+.updateDateNowPlaying {
+    color: gray;
+    margin-left: 20px;
+    margin-top: -40px;
+}
+
+/* プレイしているゲーム一覧 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        display: block;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.list_items.show {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+.close::before {
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-image: url("../images/plus.png");
+    vertical-align: middle;
+}
+.open::before {
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-image: url("../images/minus.png");
+    vertical-align: middle;
+}
+.elemHide {
+    display: none;
+}
+
+.fullOpen {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.fullClose {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*画面幅1000px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:1000px){
+    #contents {
+        display: block;
+    }
+    #contents > section {
+        width: 97%;
+    }
+}
+
+/*画面幅580px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:580px){
+
+}
