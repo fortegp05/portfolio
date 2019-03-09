@@ -12,16 +12,6 @@ $(document).ready(function(){
         if (document.fortegp05.onScrollHandlerFab) document.fortegp05.onScrollHandlerFab();
         if (document.fortegp05.onScrollHandlerToc) document.fortegp05.onScrollHandlerToc();
     }
-
-    // 画面サイズが変わった際のイベント定義
-    var observer = new ResizeObserver((entries) => {
-        if (mediaQuery.matches) return; // レスポンシブのときはやらない
-        riot.mount('toc');
-
-        if(!document.fortegp05.onScrollHandlerToc) return;
-        document.fortegp05.onScrollHandlerToc();
-    });
-    observer.observe(document.body);
     
     // -プレイしたゲーム開閉イベント
     // 全開
@@ -44,6 +34,18 @@ $(document).ready(function(){
             document.fortegp05.subjectsOpen(this);
         }
     });
+
+    if (typeof ResizeObserver == "undefined") return;
+    
+    // 画面サイズが変わった際のイベント定義
+    var observer = new ResizeObserver((entries) => {
+        if (mediaQuery.matches) return; // レスポンシブのときはやらない
+        riot.mount('toc');
+
+        if(!document.fortegp05.onScrollHandlerToc) return;
+        document.fortegp05.onScrollHandlerToc();
+    });
+    observer.observe(document.body);
 });
 
 // 開閉処理

@@ -70,7 +70,7 @@ $(document).ready(function(){
         if (document.fortegp05.onScrollHandlerToc) document.fortegp05.onScrollHandlerToc();
     }
 
-    if (typeof ResizeObserver) return;
+    if (typeof ResizeObserver == "undefined") return;
     
     // 画面サイズが変わった際のイベント定義
     var observer = new ResizeObserver((entries) => {
