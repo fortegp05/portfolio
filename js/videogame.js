@@ -17,6 +17,9 @@ $(document).ready(function(){
     var observer = new ResizeObserver((entries) => {
         if (mediaQuery.matches) return; // レスポンシブのときはやらない
         riot.mount('toc');
+
+        if(!document.fortegp05.onScrollHandlerToc) return;
+        document.fortegp05.onScrollHandlerToc();
     });
     observer.observe(document.body);
     

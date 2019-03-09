@@ -95,7 +95,7 @@ h1 {
 /* 作ったもの */
 .product_data {
     width: 100%;
-    height: auto;
+    height: 300px;
     padding-bottom: 20px;
     background-color: lightcyan;
 	display: grid;
