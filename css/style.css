@@ -29,9 +29,6 @@ a {
 	color: #002e33;	/*リンクテキストの色*/
 	transition: 0.3s;	/*マウスオン時の移り変わるまでの時間設定。0.3秒。*/
 }
-a:hover {
-	color: #224acf;	/*マウスオン時の文字色*/
-}
 
 /*コンテナー（ホームページを囲む一番外側のブロック）
 ---------------------------------------------------------------------------*/
@@ -339,6 +336,11 @@ footer .pr {
 
 .info_card a {
 	color: white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
 .info_image {
 	width: 100%;
@@ -355,10 +357,17 @@ footer .pr {
 	height: 380px;
 	margin: 20px;
 	border-radius: 5px;
-	background: white;
 	box-shadow: 0 3px 6px #ccc;
 	float: left;
+	position: relative;
 }
+.info_img_card a {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}	
 .info_img_card:hover {
 	box-shadow: 0px 20px 40px rgba(0, 0, 0, .4);
 	transform: scale(1.02,1.02);
