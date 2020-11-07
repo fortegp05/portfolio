@@ -1,0 +1,60 @@
+/*いまプレイしているゲーム*/
+.updateDateNowPlaying {
+    color: gray;
+    margin-left: 20px;
+    margin-top: -40px;
+}
+
+/* プレイしているゲーム一覧 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        display: block;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.list_items.show {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+.close::before {
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-image: url("../images/plus.png");
+    vertical-align: middle;
+}
+.open::before {
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-image: url("../images/minus.png");
+    vertical-align: middle;
+}
+.elemHide {
+    display: none;
+}
+
+.fullOpen {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.fullClose {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*画面幅580px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:580px){
+
+}

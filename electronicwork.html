@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# article: http://ogp.me/ns/ article#">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FORTE - 電子工作</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="FORTE(@FORTEgp05)のポートフォリオサイト、電子工作に関するページです。">
+        <meta name="keywords" content="VideoGame,ゲーム,Game">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/pages.css">
+        <link rel="stylesheet" href="css/electronicwork.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.13.2/riot.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/electronicwork.js"></script>
+
+        <meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@FORTEgp05" />
+		<meta name="twitter:title" content="Portfolio" />
+		<meta name="twitter:description" content="FORTE(@FORTEgp05)のポートフォリオサイト、電子工作に関するページです。" />
+		<meta name="twitter:image" content="https://fortegp05.github.io/portfolio/images/site_image.png" />
+		<meta property="og:title" content="FORTE" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://fortegp05.github.io/portfolio/" />
+		<meta property="og:image" content="https://fortegp05.github.io/portfolio/images/site_image.png" />
+		<meta property="og:site_name" content="FORTE" />
+        <meta property="og:description" content="FORTE(@FORTEgp05)のポートフォリオサイト、電子工作に関するページです。" />
+        
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <header>
+            <header-contents></header-contents>
+        </header>
+
+        <div id="container">
+            <div id="contents">
+                <div class="toc">
+                    <toc></toc>
+                </div>
+                <section>
+
+                    <h2>いままで作ったもの</h2>
+                    <div class="updateDateNowPlaying">2019年3月現在</div>
+
+                    <h3>赤ニキシー管時計</h3>
+                    <p>
+                        英国のPV Electronics製のキット。
+                    </p>
+                    <div class="imgCardArea">
+                        <div class="imgCard">
+                            <a href="images/IMG_8046.jpg">
+                                <img class="imgData" src="images/IMG_8046_sml.jpg" />
+                            </a>
+                        </div>
+
+                        <div class="imgCard">
+                            <a href="images/IMG_7305.jpg">
+                                <img class="imgData" src="images/IMG_7305_sml.jpg" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3>ニキシー管時計</h3>
+                    <p>
+                        日本のSandersonia Electronics製のキット。
+                    </p>
+                    <div class="imgCardArea">
+                        <div class="imgCard">
+                            <a href="images/IMG_5006.jpg">
+                                <img class="imgData" src="images/IMG_5006_sml.jpg" />
+                            </a>
+                        </div>
+
+                        <div class="imgCard">
+                            <a href="images/IMG_3669.jpg">
+                                <img class="imgData" src="images/IMG_3669_sml.jpg" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3>単3電池の放電器</h3>
+                    <p>
+                        ミニ四駆の充電池を特定電圧まで放電するもの。<br>
+                        一定の電圧まで放電してから充電すると、<br>
+                        満充電後のパワーが増す。
+                    </p>
+                    <div class="imgCardArea">
+                        <div class="imgCard">
+                            <a href="images/IMG_2207.jpg">
+                                <img class="imgData" src="images/IMG_2207_sml.jpg" />
+                            </a>
+                        </div>
+
+                        <div class="imgCard">
+                            <a href="images/IMG_4659.jpg">
+                                <img class="imgData" src="images/IMG_4659_sml.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <!--/contents-->
+
+            <footer>
+                <small>Copyright&copy; <a href="https://twitter.com/FORTEgp05">@FORTEgp05</a> All Rights Reserved.</small>
+                <span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+            </footer>
+
+        </div>
+        <!--/container-->
+
+        <!-- header-contents.tag mount -->
+        <script src="js/header-contents.js"></script>
+        <script>riot.mount('header-contents', {page_name: '電子工作'})</script>
+        <!-- TOC mount -->
+        <script src="js/toc.js"></script>
+        <script>riot.mount('toc')</script>
+        <!-- FAB -->
+		<fab></fab>
+		<!-- FAB mount -->
+		<script src="js/fab.js"></script>
+		<script>riot.mount('fab')</script>
+    </body>
+</html>
